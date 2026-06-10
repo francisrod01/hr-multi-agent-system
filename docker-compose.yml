@@ -1,0 +1,41 @@
+services:
+  hr-agent:
+    build: .
+    container_name: hr-multi-agent
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-dummy_key_not_needed_for_local}
+      - EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+      - CHROMA_PERSIST_DIR=/app/data/benefits_db
+      - ENVIRONMENT=development
+      - LOG_LEVEL=INFO
+    volumes:
+      - ./data:/app/data
+      - ./src:/app/src
+      - ./scripts:/app/scripts
+    ports:
+      - "8000:8000"
+    command: >
+      sh -c "python scripts/seed_rag.py &&
+             python -m uvicorn src.api.main:app --host 0.0.0.0 --port 8000"
+
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Optional: Add Prometheus for metrics
+  prometheus:
+    image: prom/prometheus:latest
+    container_name: prometheus
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus_data:/prometheus
+    ports:
+      - "9090:9090"
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+
+volumes:
+  prometheus_data:
