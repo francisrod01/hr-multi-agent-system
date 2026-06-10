@@ -1,0 +1,52 @@
+[
+  {
+    "text": "401(k) matching: Company matches 100% of employee contributions up to 4% of salary, plus 50% of next 2%. Vesting starts after 1 year, fully vested at 3 years.",
+    "category": "retirement",
+    "region": "US"
+  },
+  {
+    "text": "Health Insurance: Comprehensive medical, dental, and vision coverage. Employees pay 20% of premium, company pays 80%. Includes mental health coverage and telehealth services.",
+    "category": "health",
+    "region": "global"
+  },
+  {
+    "text": "Paid Time Off: 25 days PTO annually, plus 10 federal holidays. Unlimited sick leave. Parental leave: 16 weeks fully paid for primary caregivers, 8 weeks for secondary.",
+    "category": "time_off",
+    "region": "global"
+  },
+  {
+    "text": "Remote Work Stipend: $800/year for home office setup, plus $100/month for internet and utilities. Coworking space reimbursement up to $300/month.",
+    "category": "remote",
+    "region": "global"
+  },
+  {
+    "text": "Professional Development: $5,000/year tuition reimbursement for job-related courses. Unlimited access to LinkedIn Learning. Two paid conference attendances per year.",
+    "category": "development",
+    "region": "global"
+  },
+  {
+    "text": "Wellness Benefits: Gym membership reimbursement up to $600/year. Weekly virtual yoga sessions. Employee assistance program with 5 free therapy sessions.",
+    "category": "wellness",
+    "region": "global"
+  },
+  {
+    "text": "Equity Package: Stock options vesting over 4 years with 1-year cliff. Annual refresh grants based on performance. Employee stock purchase plan at 15% discount.",
+    "category": "equity",
+    "region": "global"
+  },
+  {
+    "text": "Commuter Benefits: Pre-tax transit and parking accounts. $200/month subsidy for public transit or ride share to office. Bike storage and shower facilities on site.",
+    "category": "commute",
+    "region": "US"
+  },
+  {
+    "text": "Meal Benefits: Free lunch provided Tuesday-Thursday. Fully stocked kitchen with snacks and beverages. Monthly team dinner budget of $50/person.",
+    "category": "perks",
+    "region": "office"
+  },
+  {
+    "text": "Family Benefits: $10,000 adoption and surrogacy assistance. Backup childcare reimbursement up to $100/day (15 days/year). Fertility benefits coverage up to $20,000 lifetime.",
+    "category": "family",
+    "region": "global"
+  }
+]
