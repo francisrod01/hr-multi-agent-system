@@ -21,6 +21,7 @@ RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
     langchain-openai \
     langchain-chroma \
     langgraph \
+    tavily-python \
     chromadb \
     sentence-transformers \
     pydantic \
